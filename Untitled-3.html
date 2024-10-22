@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3</title>
+</head>
+<body>
+    <script>
+const scoreMap = new Map([
+    ['Ваня', 24],
+    ['Вова', 51],
+    ['Коля', 24],
+    ['Артем', 68]
+]);
+
+const sortedScores = new Map([...scoreMap.entries()].sort((a, b) => b[1] - a[1]));
+
+console.log(sortedScores);
+
+    </script>
+</body>
+</html>

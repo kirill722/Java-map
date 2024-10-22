@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4</title>
+</head>
+<body>
+    <script>
+        const addresses = new Map();
+        addresses.set("Вова", "89193363475");
+        addresses.set("Ваня", "89195453465");
+        addresses.set("Артем", "8919305353");
+
+
+        const phones = new Map(addresses); 
+
+        const combinedMap = new Map();
+
+      
+        addresses.forEach((address, name) => {
+            const phone = phones.get(name);
+            combinedMap.set(name, { address, phone });
+        });
+
+        console.log(combinedMap);
+        
+
+        combinedMap.forEach((value, key) => {
+            console.log(`${key} ${value.address} `);
+        });
+    </script>
+</body>
+</html>
